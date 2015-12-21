@@ -43,9 +43,9 @@ td div {
 }
 
 .legend {
-  width: 800px;
   vertical-align: top;
-  margin: 20px auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .legend-box {
@@ -58,11 +58,7 @@ td div {
   -webkit-print-color-adjust: exact;
 }
 
-.panel {
-  width: 800px;
-  margin: auto;
-}
-
 .buttons {
   text-align: right;
+  margin-bottom: 10px;
 }

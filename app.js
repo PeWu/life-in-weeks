@@ -8,7 +8,7 @@ MainCtrl = function($scope) {
   /** Page title */
   this.title = 'My life in weeks';
   /** Date of birth */
-  this.birthDate = new Date('1970-01-01');
+  this.birthDate = new Date('1945-01-01');
   /** Number of years to display */
   this.totalYears = 90;
   /** Whether to show the legend */
@@ -33,16 +33,38 @@ MainCtrl = function($scope) {
 
   var exampleData = {
     spans: [{
-      color: '#ddd'
+      end: '1950-06-01',
+      color: '#7af',
+      description: 'Early years'
     }, {
-      begin: "2010-01-01",
-      end: "2012-06-20",
-      color: "yellow",
-      description: "Good times"
+      begin: '1950-06-02',
+      end: '1956-06-01',
+      color: '#6a3',
+      description: 'Elementary school'
     }, {
-      begin: '2013-03-21',
+      begin: '1956-06-02',
+      end: '1959-06-01',
+      color: '#3f7',
+      description: 'Middle school'
+    }, {
+      begin: '1959-06-02',
+      end: '1963-06-01',
+      color: 'yellow',
+      description: 'High school'
+    }, {
+      begin: '1963-06-02',
+      end: '1967-06-01',
+      color: 'orange',
+      description: 'High school'
+    }, {
+      begin: '1967-06-02',
+      end: '2007-12-31',
       color: '#f8a',
-      description: 'Recent times'
+      description: 'Career'
+    }, {
+      begin: '2008-01-01',
+      color: 'purple',
+      description: 'Retirement'
     }]
   };
   /** Example data in JSON format */
@@ -140,6 +162,18 @@ MainCtrl.prototype.update = function() {
 /** Displays the default browser print window. */
 MainCtrl.prototype.print = function() {
   window.print();
+};
+
+
+/** Clears the data input field. */
+MainCtrl.prototype.clearData = function() {
+  this.dataInput = '';
+};
+
+
+/** Copies the example into the data input field. */
+MainCtrl.prototype.useExample = function() {
+  this.dataInput = this.exampleData;
 };
 
 
