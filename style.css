@@ -62,3 +62,7 @@ td div {
   text-align: right;
   margin-bottom: 10px;
 }
+
+textarea {
+  margin-bottom: 8px;
+}
