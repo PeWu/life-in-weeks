@@ -47,11 +47,19 @@
             </div>
             <div>
               <label>Birth date</label>
-              <input type="date" class="form-control" ng-model="ctrl.birthDate">
+              <input
+                  type="date"
+                  class="form-control"
+                  ng-model="ctrl.birthDate"
+                  ng-model-options="{ debounce: 1000 }">
             </div>
             <div>
               <label>Years to show</label>
-              <input type="number" class="form-control" ng-model="ctrl.totalYears">
+              <input
+                  type="number"
+                  class="form-control"
+                  ng-model="ctrl.totalYears"
+                  ng-model-options="{ debounce: 1000 }">
             </div>
             <div class="checkbox">
               <label>
@@ -61,7 +69,11 @@
             </div>
             <div ng-class="{'has-error': ctrl.jsonError}">
               <label class="control-label">Data in JSON format</label>
-              <textarea class="form-control" rows="15" ng-model="ctrl.dataInput"></textarea>
+              <textarea
+                  class="form-control"
+                  rows="15"
+                  ng-model="ctrl.dataInput"
+                  ng-model-options="{ debounce: 1000 }"></textarea>
               <div class="text-danger" ng-show="ctrl.jsonError">Parse error: {{ctrl.jsonError}}</div>
             </div>
             <button class="btn btn-warning" ng-click="ctrl.clearData()">Clear</button>
